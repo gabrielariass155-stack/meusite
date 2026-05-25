@@ -5,40 +5,352 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Checkout do ebook Império Digital do Zero.">
   <title>Checkout | Império Digital do Zero</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    :root {
+      --bg: #05080d;
+      --panel: #0f1824;
+      --panel-2: #121f2d;
+      --text: #f3f7fb;
+      --muted: #a8b8c8;
+      --cyan: #12dccd;
+      --gold: #e4ce63;
+      --line: rgba(255, 255, 255, 0.12);
+      --radius: 8px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(105deg, rgba(18, 220, 205, 0.11), transparent 42%),
+        linear-gradient(180deg, #07101a 0%, var(--bg) 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(5, 8, 13, 0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand,
+    .back {
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .brand {
+      color: var(--text);
+    }
+
+    .back {
+      color: var(--muted);
+    }
+
+    .page {
+      min-height: calc(100vh - 72px);
+      padding: 62px 0 84px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 18px;
+      font-size: 3.85rem;
+      line-height: 1;
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 1.65rem;
+      line-height: 1.14;
+      overflow-wrap: break-word;
+    }
+
+    p {
+      color: var(--muted);
+      overflow-wrap: break-word;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .intro,
+    .layout > *,
+    .product > *,
+    .summary {
+      min-width: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 390px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .product,
+    .summary {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(15, 24, 36, 0.9);
+      box-shadow: var(--shadow);
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 28px;
+      align-items: center;
+      min-height: 330px;
+      padding: 28px;
+    }
+
+    .book {
+      position: relative;
+      width: 205px;
+      min-height: 285px;
+      padding: 28px 22px;
+      border: 1px solid rgba(18, 220, 205, 0.24);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(18, 220, 205, 0.12), transparent 32%),
+        linear-gradient(160deg, #112132 0%, #070d15 66%, #03060b 100%);
+      box-shadow: 16px 18px 0 #07101a, 18px 18px 0 rgba(18, 220, 205, 0.12);
+      transform: rotate(-3deg);
+    }
+
+    .book::before {
+      content: "2026";
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      background: var(--cyan);
+      color: #061015;
+      font-size: 0.68rem;
+      font-weight: 950;
+    }
+
+    .book-author {
+      color: var(--cyan);
+      font-size: 0.68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .book-title {
+      margin-top: 62px;
+      color: var(--text);
+      font-size: 1.45rem;
+      font-weight: 950;
+      line-height: 1.08;
+    }
+
+    .book-line {
+      width: 36px;
+      height: 3px;
+      margin: 18px 0;
+      background: var(--cyan);
+    }
+
+    .book-sub {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    ul {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 26px;
+      color: var(--muted);
+    }
+
+    li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 950;
+    }
+
+    li strong {
+      color: var(--text);
+    }
+
+    .summary {
+      padding: 28px;
+      background: var(--panel-2);
+    }
+
+    .row,
+    .total {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .total {
+      align-items: baseline;
+      margin-bottom: 22px;
+      border-bottom: 0;
+      color: var(--text);
+    }
+
+    .total strong {
+      font-size: 2rem;
+    }
+
+    .pay-button {
+      width: 100%;
+      min-height: 56px;
+      border: 0;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      color: #061015;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 950;
+      box-shadow: 0 14px 38px rgba(18, 220, 205, 0.18);
+    }
+
+    .note {
+      margin: 16px 0 0;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2.75rem;
+      }
+
+      .layout,
+      .product {
+        grid-template-columns: 1fr;
+      }
+
+      .book {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: calc(100vw - 32px);
+        max-width: 358px;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .page {
+        padding: 42px 0 64px;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: 1.78rem;
+      }
+
+      .product,
+      .summary {
+        padding: 22px;
+      }
+
+      li {
+        overflow-wrap: break-word;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="page-header">
-    <a class="brand" href="index.html">Império Digital</a>
-    <a class="header-link" href="index.html">Voltar</a>
+  <header class="header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Império Digital</a>
+      <a class="back" href="index.html">Voltar</a>
+    </div>
   </header>
 
-  <main class="page-shell">
-    <div class="wrap checkout-page">
-      <section class="checkout-hero">
-        <span class="section-tag">Checkout seguro</span>
-        <h1>Finalize sua compra<br>e receba o ebook<br>na hora.</h1>
+  <main class="page">
+    <div class="wrap">
+      <section class="intro">
+        <p class="eyebrow">Checkout seguro</p>
+        <h1>Finalize sua compra<br>e receba o acesso<br>ao ebook.</h1>
         <p>Você está a um passo de acessar o guia prático em português para começar um negócio digital usando IA, marketing digital, infoprodutos e automação.</p>
       </section>
 
-      <section class="checkout-layout" aria-label="Resumo da compra">
-        <article class="checkout-product">
-          <div class="checkout-product-art">
-            <div class="mockup-wrap mockup-wrap-small">
-              <div class="mockup-card" role="img" aria-label="Capa do ebook Império Digital do Zero">
-                <div class="mockup-badge">2026</div>
-                <div class="mockup-author">Ricardo Abreu</div>
-                <div class="mockup-title">Império<br>Digital<br>do Zero</div>
-                <div class="mockup-divider"></div>
-                <div class="mockup-desc">IA, marketing digital, infoprodutos e automação.</div>
-              </div>
-            </div>
+      <section class="layout" aria-label="Resumo da compra">
+        <article class="product">
+          <div class="book" aria-label="Capa visual do ebook">
+            <div class="book-author">Ricardo Abreu</div>
+            <div class="book-title">Império<br>Digital<br>do Zero</div>
+            <div class="book-line"></div>
+            <div class="book-sub">IA, marketing digital, infoprodutos e automação.</div>
           </div>
           <div>
             <h2>Império Digital do Zero</h2>
-            <p class="text-muted">PDF premium por Ricardo Abreu, criado para iniciantes que querem vender um produto digital com estrutura profissional.</p>
+            <p>PDF premium para iniciantes que querem vender um produto digital com estrutura profissional.</p>
             <ul>
-              <li><strong>Acesso digital imediato</strong> após a confirmação</li>
+              <li><strong>Acesso digital</strong> após a confirmação</li>
               <li><strong>17 páginas objetivas</strong> em formato PDF</li>
               <li><strong>7 capítulos práticos</strong> com exemplos e checklists</li>
               <li><strong>Plano de ação de 30 dias</strong> para sair da ideia</li>
@@ -46,27 +358,23 @@
           </div>
         </article>
 
-        <aside class="checkout-summary">
+        <aside class="summary">
           <h2>Resumo</h2>
-          <div class="summary-line">
-            <span>Ebook digital</span>
-            <strong>R$47,00</strong>
-          </div>
-          <div class="summary-line">
-            <span>Entrega</span>
-            <strong>Imediata</strong>
-          </div>
-          <div class="summary-total">
-            <span>Total</span>
-            <strong>R$47,00</strong>
-          </div>
-          <button class="payment-button" type="button">Ir para o pagamento</button>
-          <p class="secure-note">Você será redirecionado para o pagamento seguro na Kiwify. Após a confirmação, o acesso ao ebook deve aparecer na plataforma e no e-mail usado na compra.</p>
+          <div class="row"><span>Ebook digital</span><strong>R$47,00</strong></div>
+          <div class="row"><span>Entrega</span><strong>Imediata</strong></div>
+          <div class="total"><span>Total</span><strong>R$47,00</strong></div>
+          <button class="pay-button" type="button" id="payButton">Ir para o pagamento</button>
+          <p class="note">Você será redirecionado para o pagamento seguro na Kiwify. Após a confirmação, o acesso ao ebook deve aparecer na plataforma e no e-mail usado na compra.</p>
         </aside>
       </section>
     </div>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    const PAYMENT_LINK = "https://pay.kiwify.com.br/acG8KgP";
+    document.getElementById("payButton").addEventListener("click", () => {
+      window.location.href = PAYMENT_LINK;
+    });
+  </script>
 </body>
 </html>
