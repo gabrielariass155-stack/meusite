@@ -1,30 +1,43 @@
-# Sitio de venta del ebook
+# Império Digital do Zero
 
-Proyecto estático completo para vender y entregar el ebook **Cómo Construir un Imperio Digital Desde Cero en 2026**.
+Site de venda do ebook digital de Ricardo Abreu, atualizado com a nova identidade visual baseada no arquivo `index 6.html`.
 
-## Archivos
+## Estrutura
 
-- `index.html`: página principal de venta.
-- `checkout.html`: checkout listo para conectar con una plataforma de pago.
-- `gracias.html`: página de agradecimiento con botón de descarga.
-- `assets/css/styles.css`: estilos del sitio.
-- `assets/js/main.js`: configuración del enlace de pago y descarga.
-- `assets/images/mockup-3d-ebook.png`: mockup 3D del ebook.
-- `assets/images/mockup-3d-ebook-crop.png`: mockup 3D optimizado para la página.
-- `assets/pdf/Como-Construir-un-Imperio-Digital-Desde-Cero-en-2026-Ricardo-Abreu.pdf`: PDF entregable.
+- `index.html`: página principal de venda.
+- `checkout.html`: página de checkout pronta para enviar o comprador ao pagamento.
+- `gracias.html`: página de obrigado com orientação de acesso pela Kiwify/e-mail.
+- `assets/css/styles.css`: estilos globais do site.
+- `assets/js/main.js`: link de pagamento e animações.
+- `assets/images/`: mockups do ebook.
+- `assets/pdf/imperio-digital-do-zero-pt.pdf`: cópia local do PDF em português para configurar a entrega dentro da Kiwify.
 
-## Conectar pago real
+## Pagamento
 
-Abre `assets/js/main.js` y reemplaza:
-
-```js
-const PAYMENT_LINK = "";
-```
-
-por el enlace real de pago de Stripe, Gumroad, Hotmart, Shopify u otra plataforma:
+O botão de checkout usa o link configurado em `assets/js/main.js`:
 
 ```js
-const PAYMENT_LINK = "https://tu-link-de-pago.com";
+const PAYMENT_LINK = "https://pay.kiwify.com.br/acG8KgP";
 ```
 
-En tu plataforma de pago, configura la URL de éxito o redirección final hacia `gracias.html`. Esa página muestra el botón de descarga del PDF.
+Para vender de verdade, configure na Kiwify a página de obrigado como URL de redirecionamento após compra:
+
+```txt
+gracias.html
+```
+
+Configure a entrega do PDF dentro da Kiwify. O arquivo não deve ficar como download público no GitHub Pages, para evitar que alguém acesse o produto sem comprar.
+
+## Como testar
+
+Abra `index.html` diretamente no navegador ou rode um servidor local dentro desta pasta:
+
+```powershell
+python -m http.server 5500
+```
+
+Depois acesse:
+
+```txt
+http://127.0.0.1:5500/
+```
