@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Império Digital do Zero, ebook em português para começar um negócio digital com IA, marketing digital, infoprodutos e automação.">
-  <title>Império Digital do Zero | Ebook 2026</title>
+  <meta name="description" content="Império Digital Para Quem Quer Começar do Zero, ebook em português para iniciantes que querem usar IA para organizar ideias e começar no digital com mais clareza.">
+  <title>Império Digital Para Quem Quer Começar do Zero | Ebook</title>
   <style>
     :root {
       --bg: #05080d;
@@ -496,6 +496,102 @@
       background: rgba(255, 255, 255, 0.04);
     }
 
+    .problem,
+    .trust {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(18, 220, 205, 0.12), transparent 30%),
+        var(--bg);
+    }
+
+    .problem-box,
+    .trust-box,
+    .audience-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(15, 24, 36, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-box,
+    .trust-box {
+      max-width: 860px;
+      padding: 34px;
+    }
+
+    .audience-box {
+      padding: 28px;
+    }
+
+    .learn-grid,
+    .faq-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .learn-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .learn-item,
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(15, 24, 36, 0.82);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+    }
+
+    .learn-item {
+      position: relative;
+      min-height: 86px;
+      padding: 20px 20px 20px 54px;
+      color: var(--muted);
+      font-weight: 720;
+    }
+
+    .learn-item::before {
+      content: "✓";
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(18, 220, 205, 0.12);
+      color: var(--cyan);
+      font-size: 0.9rem;
+      font-weight: 950;
+    }
+
+    .old-price {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--soft);
+      font-size: 1.1rem;
+      font-weight: 850;
+      text-decoration: line-through;
+    }
+
+    .offer-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .faq-grid {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      padding: 22px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 8px;
+    }
+
     .footer {
       padding: 30px 0;
       border-top: 1px solid var(--line);
@@ -521,7 +617,8 @@
 
       .hero-grid,
       .split,
-      .offer-grid {
+      .offer-grid,
+      .learn-grid {
         grid-template-columns: 1fr;
       }
 
@@ -592,8 +689,16 @@
       }
 
       .benefit-grid,
-      .chapter-grid {
+      .chapter-grid,
+      .learn-grid {
         grid-template-columns: 1fr;
+      }
+
+      .problem-box,
+      .trust-box,
+      .audience-box,
+      .faq-item {
+        padding: 22px;
       }
 
       .book-scene {
@@ -630,11 +735,12 @@
         <span>Império Digital</span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#beneficios">Benefícios</a>
-        <a href="#conteudo">Conteúdo</a>
+        <a href="#problema">Problema</a>
+        <a href="#beneficios">Aprender</a>
         <a href="#oferta">Oferta</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="nav-cta" href="checkout.html">Comprar</a>
+      <a class="nav-cta" href="https://pay.kiwify.com.br/RQPyQaS">Acessar ebook</a>
     </div>
   </header>
 
@@ -642,12 +748,12 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Ebook premium 2026</p>
-          <h1>Crie seu primeiro<br>negócio digital<br>do zero com <span>inteligência artificial.</span></h1>
-          <p class="hero-subtitle">Um guia direto para sair da confusão, escolher uma ideia, criar seu infoproduto, montar uma oferta e começar a vender online no Brasil.</p>
+          <p class="eyebrow">Império Digital Para Quem Quer Começar do Zero</p>
+          <h1>Aprenda a usar IA para começar no digital, mesmo sendo <span>iniciante.</span></h1>
+          <p class="hero-subtitle">Um ebook simples, direto e passo a passo para quem quer sair do zero, organizar ideias e começar com mais clareza.</p>
           <div class="hero-actions">
-            <a class="btn-primary" href="checkout.html">Quero começar agora</a>
-            <a class="btn-secondary" href="#conteudo">Ver conteúdo</a>
+            <a class="btn-primary" href="https://pay.kiwify.com.br/RQPyQaS">Quero acessar o ebook agora</a>
+            <a class="btn-secondary" href="#beneficios">Ver o que vou aprender</a>
           </div>
           <div class="hero-proof" aria-label="Pontos principais">
             <span>Acesso digital</span>
@@ -657,7 +763,7 @@
           <div class="hero-stats" aria-label="Resumo do produto">
             <div class="stat"><strong>17</strong><span>páginas</span></div>
             <div class="stat"><strong>7</strong><span>capítulos</span></div>
-            <div class="stat"><strong>30</strong><span>dias de ação</span></div>
+            <div class="stat"><strong>R$19,99</strong><span>promoção</span></div>
           </div>
         </div>
 
@@ -667,9 +773,19 @@
               <div class="book-author">Ricardo Abreu</div>
               <div class="book-title">Império<br>Digital<br>do Zero</div>
               <div class="book-line"></div>
-              <div class="book-sub">IA, marketing digital, infoprodutos e automação.</div>
+              <div class="book-sub">IA simples para organizar ideias e começar no digital.</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema" class="problem">
+      <div class="wrap">
+        <div class="problem-box">
+          <p class="eyebrow">Antes de começar</p>
+          <h2>Você quer começar, mas sente que está perdido?</h2>
+          <p>Talvez você veja muitas pessoas falando sobre IA, negócios digitais e renda online, mas quando chega a hora de começar, tudo parece confuso. Este ebook foi criado para simplificar esse caminho.</p>
         </div>
       </div>
     </section>
@@ -677,26 +793,17 @@
     <section id="beneficios">
       <div class="wrap">
         <div class="section-head center">
-          <p class="eyebrow">O que você vai conquistar</p>
-          <h2>Um roteiro simples para transformar uma ideia em uma oferta pronta para vender.</h2>
-          <p>Feito para iniciantes que querem aprender com clareza, evitar excesso de teoria e começar a agir.</p>
+          <p class="eyebrow">Benefícios práticos</p>
+          <h2>O que você vai aprender</h2>
+          <p>Um caminho simples para entender a IA e transformar confusão em próximos passos claros.</p>
         </div>
-        <div class="benefit-grid">
-          <article class="card">
-            <div class="icon">01</div>
-            <h3>Foco desde o zero</h3>
-            <p>Organize sua mentalidade, reduza a procrastinação e crie uma rotina possível de manter.</p>
-          </article>
-          <article class="card">
-            <div class="icon">02</div>
-            <h3>IA aplicada</h3>
-            <p>Use ferramentas como ChatGPT e Canva para acelerar ideias, conteúdo, produto e página de venda.</p>
-          </article>
-          <article class="card">
-            <div class="icon">03</div>
-            <h3>Plano de ação</h3>
-            <p>Siga passos pequenos para escolher nicho, publicar conteúdo, montar oferta e iniciar vendas.</p>
-          </article>
+        <div class="learn-grid">
+          <div class="learn-item">Como usar IA para criar ideias do zero</div>
+          <div class="learn-item">Como organizar um plano simples para começar</div>
+          <div class="learn-item">Como criar textos para posts e anúncios</div>
+          <div class="learn-item">Como usar a IA sem complicação</div>
+          <div class="learn-item">Como transformar confusão em ação</div>
+          <div class="learn-item">Como dar os primeiros passos no digital com mais segurança</div>
         </div>
       </div>
     </section>
@@ -704,17 +811,11 @@
     <section>
       <div class="wrap split">
         <div>
-          <p class="eyebrow">Descrição de venda</p>
-          <h2>Este ebook é para quem quer começar com direção, não com confusão.</h2>
+          <p class="eyebrow">Para quem é este ebook?</p>
+          <h2>Feito para quem precisa de um começo simples.</h2>
         </div>
-        <div>
-          <p>O <strong class="accent">Império Digital do Zero</strong> mostra como transformar uma ideia simples em um negócio digital com ajuda da inteligência artificial, criação de conteúdo e marketing digital.</p>
-          <p>Você aprende a escolher um nicho, identificar problemas reais, criar um infoproduto, montar uma oferta e vender usando canais como Instagram, TikTok, páginas de venda e plataformas de pagamento.</p>
-          <ul class="check-list">
-            <li>Linguagem simples, sem teoria pesada.</li>
-            <li>Exercícios e checklists para colocar em prática.</li>
-            <li>Visão de produto premium para vender com mais valor.</li>
-          </ul>
+        <div class="audience-box">
+          <p>Para iniciantes, pessoas curiosas sobre IA, quem quer começar no digital, quem não sabe por onde começar e quem precisa de um plano simples para sair da estagnação.</p>
         </div>
       </div>
     </section>
@@ -723,15 +824,15 @@
       <div class="wrap">
         <div class="section-head center">
           <p class="eyebrow">Conteúdo do ebook</p>
-          <h2>7 capítulos para construir seu primeiro negócio digital.</h2>
-          <p>Do foco inicial ao plano de ação, cada parte foi organizada para você avançar com passos pequenos e consistentes.</p>
+          <h2>Conteúdo direto, sem complicar.</h2>
+          <p>Do uso inicial da IA ao plano de ação, cada parte foi organizada para você avançar com passos pequenos e consistentes.</p>
         </div>
         <div class="chapter-grid">
           <article class="chapter"><span class="chapter-num">01</span><h3>Mentalidade para começar do zero</h3></article>
           <article class="chapter"><span class="chapter-num">02</span><h3>O que é um negócio digital</h3></article>
-          <article class="chapter"><span class="chapter-num">03</span><h3>Como ganhar dinheiro usando IA</h3></article>
+          <article class="chapter"><span class="chapter-num">03</span><h3>Como usar IA para gerar ideias e textos</h3></article>
           <article class="chapter"><span class="chapter-num">04</span><h3>Como criar seu primeiro infoproduto</h3></article>
-          <article class="chapter"><span class="chapter-num">05</span><h3>Como vender na internet</h3></article>
+          <article class="chapter"><span class="chapter-num">05</span><h3>Como divulgar com mais clareza</h3></article>
           <article class="chapter"><span class="chapter-num">06</span><h3>Ferramentas recomendadas</h3></article>
           <article class="chapter"><span class="chapter-num">07</span><h3>Plano de ação de 30 dias</h3></article>
           <article class="chapter"><span class="chapter-num">+</span><h3>Checklists, exercícios e erros comuns</h3></article>
@@ -742,28 +843,63 @@
     <section id="oferta" class="offer">
       <div class="wrap offer-grid">
         <div>
-          <p class="eyebrow">Oferta especial</p>
-          <h2>Por R$47, comece com um guia claro, bonito e direto ao ponto.</h2>
-          <p>Você não precisa ter equipe, experiência ou grandes investimentos para começar. Precisa de direção, uma oferta simples e execução consistente.</p>
+          <p class="eyebrow">Promoção de lançamento</p>
+          <h2>De R$47 por apenas R$19,99 por tempo limitado.</h2>
+          <p>Você não precisa saber tudo antes de começar. Precisa de um material simples para organizar ideias, entender os próximos passos e começar com mais clareza.</p>
           <div class="hero-actions">
-            <a class="btn-primary" href="checkout.html">Comprar agora</a>
-            <a class="btn-secondary" href="#conteudo">Revisar conteúdo</a>
+            <a class="btn-primary" href="https://pay.kiwify.com.br/RQPyQaS">Garantir meu ebook por R$19,99</a>
+            <a class="btn-secondary" href="#faq">Tirar dúvidas</a>
           </div>
         </div>
         <aside class="offer-box">
           <p class="eyebrow">Pagamento único</p>
-          <div class="price">R$47</div>
+          <span class="old-price">R$47</span>
+          <div class="price">R$19,99</div>
           <p>Entrega digital após a confirmação.</p>
           <ul class="check-list">
             <li>PDF premium em português</li>
             <li>17 páginas diretas e fáceis de aplicar</li>
             <li>7 capítulos com exemplos e checklists</li>
-            <li>Plano de ação de 30 dias</li>
+            <li>Plano simples para sair da confusão</li>
           </ul>
           <div class="bonus-box">
-            <strong>Comece hoje:</strong> escolha um nicho, monte uma promessa simples e publique seu primeiro conteúdo com CTA.
+            <strong>Importante:</strong> este é um produto educativo. Ele ajuda você a começar com mais clareza, sem prometer resultados garantidos.
           </div>
+          <p class="offer-note">Compra processada pela Kiwify.</p>
         </aside>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="wrap">
+        <div class="trust-box">
+          <p class="eyebrow">Começo possível</p>
+          <h2>Você não precisa saber tudo. Só precisa começar.</h2>
+          <p>O conteúdo foi pensado para ser simples, direto e fácil de entender, mesmo para quem nunca usou IA antes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="eyebrow">Dúvidas rápidas</p>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Preciso saber usar IA?</h3>
+            <p>Não. O ebook foi feito para iniciantes.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Recebo acesso na hora?</h3>
+            <p>Sim. Após a compra, o acesso é liberado pela Kiwify.</p>
+          </article>
+          <article class="faq-item">
+            <h3>O pagamento é seguro?</h3>
+            <p>Sim. A compra é processada pela Kiwify.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -771,7 +907,7 @@
   <footer class="footer">
     <div class="wrap">
       <span>© 2026 Ricardo Abreu. Produto digital educativo.</span>
-      <a href="checkout.html">Comprar ebook</a>
+      <a href="https://pay.kiwify.com.br/RQPyQaS">Comprar ebook</a>
     </div>
   </footer>
 </body>
